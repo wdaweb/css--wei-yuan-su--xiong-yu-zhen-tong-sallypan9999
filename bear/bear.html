@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>熊本熊</title>
+</head>
+<style>
+    .frame {
+        width: 600px;
+        height: 600px;
+        /* 水平垂直置中 */
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        margin: auto;
+    }
+
+    .head {
+        width: 600px;
+        height: 600px;
+        border-radius: 50%;
+        background: #000;
+        position: relative;
+    }
+
+    .mouth {
+        width: 250px;
+        height: 190px;
+        border-radius: 50%;
+        background: #fff;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -40%);
+    }
+
+    .mouth::before {
+        content: "";
+        width: 150px;
+        height: 60px;
+        border-radius: 50%;
+        background: #000;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -20%);
+    }
+
+    .mouth::after {
+        content: "";
+        width: 65px;
+        height: 40px;
+        border-radius: 50%;
+        background: #000;
+        position: absolute;
+        top: 25%;
+        left: 50%;
+        transform: translate(-50%, -80%);
+
+    }
+
+    .eye-left {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        background: rgb(255, 255, 255);
+        position: absolute;
+        top: 20%;
+        left: 20%;
+    }
+
+    .eye-left::before {
+        content: "";
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background: #000;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .eye-right {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        background: #fff;
+        position: absolute;
+        top: 20%;
+        right: 20%;
+    }
+
+    .eye-right::before {
+        content: "";
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background: #000;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .ear-left {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background: #000;
+        position: absolute;
+        top: 1%;
+        left: 10%;
+    }
+
+    .ear-left::before {
+        content: "";
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: #fff;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .ear-right {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background: #000;
+        position: absolute;
+        top: 1%;
+        right: 10%;
+    }
+
+    .ear-right::before {
+        content: "";
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: #fff;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .blush {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+
+    .blush::before {
+        content: "";
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        background: red;
+        position: absolute;
+        top: 50%;
+        transform: translate(-20%, -50%);
+    }
+
+    .blush::after {
+        content: "";
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        background: red;
+        position: absolute;
+        top: 50%;
+        right: 0%;
+        transform: translate(20%, -50%);
+    }
+
+    .pattern {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+
+    .pattern::before {
+        content: "";
+        width: 80px;
+        height: 100px;
+        background: #fff;
+        transform: skewX(45deg);
+        position: absolute;
+        bottom: 8%;
+        left: 35%;
+    }
+
+    .pattern::after {
+        content: "";
+        width: 80px;
+        height: 100px;
+        background: #fff;
+        transform: skewX(-45deg);
+        position: absolute;
+        bottom: 8%;
+        right: 35%;
+    }
+</style>
+
+<body>
+    <div class="frame">
+        <div class="head"></div>
+        <div class="mouth"></div>
+        <div class="ear-left"></div>
+        <div class="ear-right"></div>
+        <div class="eye-left"></div>
+        <div class="eye-right"></div>
+        <div class="blush"></div>
+        <div class="pattern"></div>
+
+    </div>
+</body>
+
+</html>
